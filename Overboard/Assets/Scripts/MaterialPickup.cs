@@ -27,5 +27,4 @@ public class MaterialPickup : MonoBehaviour
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
-    void Update() => text.text = "Wood : " + PlayerPrefs.GetInt("Wood") + " " + "Nails : " + PlayerPrefs.GetInt("Nails");
 }
