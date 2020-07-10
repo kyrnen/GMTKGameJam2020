@@ -47,4 +47,9 @@ public class PickUp : MonoBehaviour
             i++;
         }
     }
+
+    int GetObjID()
+    {
+        return selectedObj;
+    }
 }

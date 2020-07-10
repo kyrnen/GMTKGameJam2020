@@ -4,6 +4,7 @@ public class PlankScript : MonoBehaviour
 {
     public bool IsBroken;
     public int ErrorType;
+    bool OnTop = false;
     Color[] Colors = new Color[] {Color.red, Color.blue, Color.green };
 
     public bool GetStaus()
@@ -28,5 +29,11 @@ public class PlankScript : MonoBehaviour
     void OnTriggerEnter()
     {
         Debug.Log("Trigger");
+        OnTop = true;
+    }
+    
+    void OnTriggerExit()
+    {
+        OnTop = false;
     }
 }
