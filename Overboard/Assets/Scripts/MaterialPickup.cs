@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class MaterialPickup : MonoBehaviour
 {
+    [SerializeField]
+    TextMeshProUGUI text;
+
     /// <summary>
     /// OnCollisionStay is called once per frame for every collider/rigidbody
     /// that is touching rigidbody/collider.
@@ -14,7 +18,7 @@ public class MaterialPickup : MonoBehaviour
             MaterialPickUpable materialPickUpable = other.gameObject.GetComponent<MaterialPickUpable>();
             if (materialPickUpable != null)
             {
-                PlayerPrefs.SetInt(materialPickUpable.resourceType, materialPickUpable.resourceAmnt);
+                PlayerPrefs.SetInt(materialPickUpable.resourceType, PlayerPrefs.GetInt(materialPickUpable.resourceType) + materialPickUpable.resourceAmnt);
                 Destroy(other.gameObject);
             }
         }
@@ -25,6 +29,6 @@ public class MaterialPickup : MonoBehaviour
     /// </summary>
     void Update()
     {
-
+        text.text = "Wood : " + PlayerPrefs.GetInt("Wood") + " " + "Nails : " + PlayerPrefs.GetInt("Nails");
     }
 }
