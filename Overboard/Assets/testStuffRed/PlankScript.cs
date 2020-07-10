@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlankScript : MonoBehaviour
 {
     public bool IsBroken;
     public int ErrorType;
     Color[] Colors = new Color[] {Color.red, Color.blue, Color.green };
-  
+
     public bool GetStaus()
     {
         return IsBroken;
