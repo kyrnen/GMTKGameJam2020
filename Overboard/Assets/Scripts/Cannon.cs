@@ -12,18 +12,12 @@ public class Cannon : MonoBehaviour
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    void Start()
-    {
-        StartCoroutine(Shoot());
-    }
+    void Start() => StartCoroutine(Shoot());
 
     /// <summary>
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     /// </summary>
-    void FixedUpdate()
-    {
-        transform.LookAt(player);
-    }
+    void FixedUpdate() => transform.LookAt(player);
 
     IEnumerator Shoot()
     {

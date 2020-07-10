@@ -10,27 +10,24 @@ public class PickUp : MonoBehaviour
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    void Start()
-    {
-        SelectObject();
-    }
+    void Start() => SelectObject();
 
     /// <summary>
     /// OnCollisionStay is called once per frame for every collider/rigidbody
     /// that is touching rigidbody/collider.
     /// </summary>
     /// <param name="other">The Collision data associated with this collision.</param>
-    void OnCollisionStay(Collision other)
+    void OnCollisionStay(Collision other) => PickUpInput(other.gameObject);
+
+    void PickUpInput(GameObject other)
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("f");
             PickUpID pickUpID = other.gameObject.GetComponent<PickUpID>();
             if (pickUpID != null)
             {
                 selectedObj = pickUpID.id;
                 SelectObject();
-                Debug.Log("c");
                 Destroy(other.gameObject);
             }
         }

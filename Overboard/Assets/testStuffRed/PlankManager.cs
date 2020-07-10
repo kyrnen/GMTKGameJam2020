@@ -12,12 +12,11 @@ public class PlankManager : MonoBehaviour
     float TimeStorage;
     PlankScript[] AllPlanks;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        AllPlanks = this.GetComponentsInChildren<PlankScript>();
-        Debug.Log(AllPlanks.Length);
-    }
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start() => AllPlanks = this.GetComponentsInChildren<PlankScript>();
 
     // Update is called once per frame
     void Update()
@@ -71,7 +70,6 @@ public class PlankManager : MonoBehaviour
             {
                 Debug.Log("No Avaliable Target Found");
             }
-            
         }
     }
 }
