@@ -5,13 +5,17 @@ public class CannonBall : MonoBehaviour
     [SerializeField]
     new Rigidbody rigidbody;
     [SerializeField]
-    float speed = 1f;
+    float speed = 1f, destroyDelay;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    void Start() => rigidbody.velocity = transform.forward * speed;
+    void Start()
+    {
+        rigidbody.velocity = transform.forward * speed;
+        Destroy(gameObject, destroyDelay);
+    }
 
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
