@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     /// </summary>
-    void FixedUpdate() => rigidbody.MovePosition(transform.position + (moveDir * speed * Time.fixedDeltaTime));
+    void FixedUpdate() => Move();
 
+    void Move() => rigidbody.MovePosition(transform.position + (moveDir * speed * Time.fixedDeltaTime));
 }
