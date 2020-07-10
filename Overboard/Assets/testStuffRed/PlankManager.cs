@@ -73,13 +73,4 @@ public class PlankManager : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter()
-    {
-        Debug.Log("Trigger");
-        transform.position = transform.position + Vector3.up * 0.2f;
-    }
-    void OnTriggerExit()
-    {
-        transform.position = transform.position - Vector3.up * 0.2f;
-    }
 }

@@ -24,4 +24,9 @@ public class PlankScript : MonoBehaviour
         ErrorType = 0;
         this.GetComponent<Renderer>().material.color = Color.white;
     }
+
+    void OnTriggerEnter()
+    {
+        Debug.Log("Trigger");
+    }
 }
