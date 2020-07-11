@@ -27,11 +27,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void Update()
     {
-        MoveInput();
         DashInput();
     }
-
-    void MoveInput() => Debug.Log("ef");
 
     void DashInput()
     {
