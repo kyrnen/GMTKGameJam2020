@@ -41,6 +41,7 @@ public class PickUp : MonoBehaviour
             if (i == selectedObj)
             {
                 weapon.gameObject.SetActive(true);
+                break;
             }
             else
                 weapon.gameObject.SetActive(false);
@@ -48,6 +49,11 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    public void ResetHolder()
+    {
+        selectedObj = 0;
+        SelectObject();
+    }
     public int GetObjID()
     {
         return selectedObj;

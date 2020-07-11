@@ -108,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
-        Debug.Log(movement.ToString());
+        //Debug.Log(movement.ToString());
         rb.MovePosition(transform.position + (movement * speed * Time.fixedDeltaTime));
     }
 }

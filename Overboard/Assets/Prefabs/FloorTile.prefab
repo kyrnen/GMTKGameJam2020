@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7498345321473638254}
   - component: {fileID: -4943268109271945721}
   m_Layer: 0
-  m_Name: Plank
+  m_Name: FloorTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7259230091295329041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.25, z: 1}
+  m_LocalScale: {x: 3, y: 0.25, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBroken: 0
-  ErrorType: 0
+  ErrorType: -1
+  Player: {fileID: 0}
 --- !u!54 &7498345321473638254
 Rigidbody:
   m_ObjectHideFlags: 0
