@@ -6,7 +6,7 @@ public class ScrollText : MonoBehaviour
 {
     public float Speed;
     int StartDepth = -620;
-    int EndDepth = 2300;
+    int EndDepth = 1900;
 
     void Start()
     {
@@ -14,15 +14,15 @@ public class ScrollText : MonoBehaviour
     }
     void Update()
     {
-        if(transform.position.y < EndDepth && Speed >= 0)
+        if(transform.localPosition.y < EndDepth && Speed >= 0)
         {
             transform.localPosition += Vector3.up * Speed * Time.deltaTime;
         }
-        if(transform.position.y > StartDepth && Speed < 0)
+        if(transform.localPosition.y > StartDepth && Speed < 0)
         {
             transform.localPosition += Vector3.up * Speed * Time.deltaTime;
         }
-
+        Debug.Log(transform.localPosition.y);
     }
 
     public void SetSpeed(float Value)
