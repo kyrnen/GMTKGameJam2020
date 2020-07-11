@@ -13,12 +13,11 @@ public class PlayerTileManager : MonoBehaviour
     {
         if (Input.GetKeyDown(FixButton))
         {
-            HeldItemID = GetComponent<PickUp>().GetObjID();
             if(CurrentScript != null && CurrentScript.GetDamageType() == HeldItemID)
             {
                 Debug.Log("Fixing Issue");
                 CurrentScript.Repair();
-                GetComponent<PickUp>().ResetHolder();
+                HeldItemID = -2;
             }
         }
     }
