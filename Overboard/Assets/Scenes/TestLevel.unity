@@ -894,10 +894,15 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6267581355041155893, guid: a90e7131af454a149bfc1d327f9eef1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6841188884439096353, guid: a90e7131af454a149bfc1d327f9eef1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 6841188884439096353, guid: a90e7131af454a149bfc1d327f9eef1a,
         type: 3}
