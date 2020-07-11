@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     new Rigidbody rigidbody;
     public float speed, dashSpeed, dashDelay;
+    public int PlayerNumber = 1;
     Vector3 moveDir, lastPos, newPos;
     bool hasDashed = true, canDash;
     [SerializeField]
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void DashInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKeyDown(Keys.GetKey((PlayerNumber-1)*3)) && canDash)
         {
             hasDashed = false;
             canDash = false;

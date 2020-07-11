@@ -7,11 +7,11 @@ public class PlayerTileManager : MonoBehaviour
     GameObject CurrentTile = null;
     PlankScript CurrentScript;
     public int HeldItemID = -2;
-    public string FixButton = "e";
+    public int PlayerNumber = 1;
 
     void Update()
     {
-        if (Input.GetKeyDown(FixButton))
+        if (Input.GetKeyDown(Keys.GetKey(2+(PlayerNumber-1)*3)))
         {
             if(CurrentScript != null && CurrentScript.GetDamageType() == HeldItemID)
             {
