@@ -65,8 +65,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 direction = 4;
             }
-            Debug.Log(Input.GetAxis(horizontal) + ", 0, " + Input.GetAxis(vertical));
-            Debug.Log("Dash direction: " + direction.ToString());
         }
         else
         {

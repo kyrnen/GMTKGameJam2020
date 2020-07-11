@@ -218,12 +218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c910998260ef1249bf136070156d357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 6841188884439096357}
+  horizontal: HorizontalPlayerTwo
+  vertical: VerticalPlayerTwo
   speed: 10
   dashSpeed: 30
-  dashDelay: 0.6
-  horizontalInput: HorizontalPlayerTwo
-  verticalInput: VerticalPlayerTwo
+  startDashTime: 0.1
 --- !u!114 &6841188884439096352
 MonoBehaviour:
   m_ObjectHideFlags: 0
