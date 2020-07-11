@@ -4,7 +4,7 @@ public class PlankScript : MonoBehaviour
 {
     public bool IsBroken;
     public int ErrorType;
-    GameObject Player;
+    public GameObject Player;
     bool OnTop = false;
     Color[] Colors = new Color[] {Color.red, Color.blue, Color.green };
 
@@ -35,15 +35,14 @@ public class PlankScript : MonoBehaviour
         this.GetComponent<Renderer>().material.color = Color.white;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void StartCollision()
     {
-        Debug.Log("Trigger");
-        Player = other.gameObject;
         OnTop = true;
+        this.GetComponent<Renderer>().material.color = Color.yellow;
     }
-    
-    void OnTriggerExit()
+    public void StopCollision()
     {
         OnTop = false;
+        this.GetComponent<Renderer>().material.color = Color.white;
     }
 }
