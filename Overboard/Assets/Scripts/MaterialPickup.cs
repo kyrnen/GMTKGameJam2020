@@ -19,7 +19,7 @@ public class MaterialPickup : MonoBehaviour
             if (materialPickUpable != null)
             {
                 PlayerPrefs.SetInt(materialPickUpable.resourceType, PlayerPrefs.GetInt(materialPickUpable.resourceType) + materialPickUpable.resourceAmnt);
-                Destroy(other.gameObject);
+                //Destroy(other.gameObject);
             }
         }
     }

@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 6841188884439096352}
   - component: {fileID: 5176017682351852771}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerOne
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,6 +379,8 @@ MonoBehaviour:
   speed: 10
   dashSpeed: 30
   dashDelay: 0.6
+  horizontalInput: HorizontalPlayerOne
+  verticalInput: VerticalPlayerOne
 --- !u!114 &6841188884439096352
 MonoBehaviour:
   m_ObjectHideFlags: 0
