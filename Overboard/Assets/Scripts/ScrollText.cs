@@ -5,18 +5,28 @@ using UnityEngine;
 public class ScrollText : MonoBehaviour
 {
     public float Speed;
-    int StartDepth = -800;
-    int EndDepth = 2400;
+    int StartDepth = -620;
+    int EndDepth = 2420;
 
     void Start()
     {
-        transform.position = Vector3.up * StartDepth;
+        transform.localPosition = Vector3.up * StartDepth;
     }
     void Update()
     {
-        if(transform.position.y < EndDepth)
+        if(transform.position.y < EndDepth && Speed >= 0)
         {
-            transform.position += Vector3.up * Speed * Time.deltaTime;
+            transform.localPosition += Vector3.up * Speed * Time.deltaTime;
         }
+        if(transform.position.y > StartDepth && Speed < 0)
+        {
+            transform.localPosition += Vector3.up * Speed * Time.deltaTime;
+        }
+
+    }
+
+    public void SetSpeed(float Value)
+    {
+        Speed = Value;
     }
 }
