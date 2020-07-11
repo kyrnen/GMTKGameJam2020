@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7932143593249695862}
   - component: {fileID: 7932143593249695865}
   - component: {fileID: 7932143593249695864}
+  - component: {fileID: -7040953550534968645}
+  - component: {fileID: 6648516704448953039}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,3 +130,30 @@ MonoBehaviour:
   speed: 15
   dashSpeed: 25
   startDashTime: 0.1
+--- !u!114 &-7040953550534968645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932143593249695867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d4bd4db411e154eb6e2a5e53aa496f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathDepth: -1
+--- !u!114 &6648516704448953039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932143593249695867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775bd336bfcf2a741be3b01b5fe94c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeldItemID: -2
+  FixButton: f
