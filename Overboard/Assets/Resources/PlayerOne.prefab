@@ -220,11 +220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c910998260ef1249bf136070156d357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: Horizontal
-  vertical: Vertical
+  rigidbody: {fileID: 6841188884439096357}
   speed: 10
   dashSpeed: 30
-  startDashTime: 0.1
+  horizontal: Horizontal
+  vertical: Vertical
+  dash: 0
 --- !u!114 &6841188884439096352
 MonoBehaviour:
   m_ObjectHideFlags: 0
