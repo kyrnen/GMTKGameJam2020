@@ -2,7 +2,7 @@
 
 public static class Keys
 {
-    public static KeyCode[] keys = new KeyCode[6];
+    public static KeyCode[] keys = new KeyCode[] { KeyCode.Space, KeyCode.E, KeyCode.F, KeyCode.P, KeyCode.O, KeyCode.Alpha0 };
 
     public static void SetKey(KeyCode keyCode, int index)
     {
