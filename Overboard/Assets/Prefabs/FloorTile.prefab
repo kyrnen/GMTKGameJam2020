@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBroken: 0
-  ErrorType: 0
+  ErrorType: -1
   Player: {fileID: 0}
 --- !u!54 &7498345321473638254
 Rigidbody:

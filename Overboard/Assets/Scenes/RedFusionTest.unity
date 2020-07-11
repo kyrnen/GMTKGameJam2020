@@ -729,10 +729,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa48166a98842694e9e5b0f6c19fd500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TickTime: 10
-  IncedentChance: 0
+  TickTime: 5
+  IncedentChance: 100
   Cooldown: 0
-  ProblemOptions: 1400000064000000
+  ProblemOptions: 3200000064000000
 --- !u!4 &1136471445
 Transform:
   m_ObjectHideFlags: 0
@@ -770,6 +770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775bd336bfcf2a741be3b01b5fe94c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeldItemID: -2
+  FixButton: f
 --- !u!4 &1523686789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7259230091295329046, guid: f7b663d23223f5c48b3a0e482b3241e3,
@@ -889,7 +891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868506763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 1, z: 0}
+  m_LocalPosition: {x: -1.5, y: 1, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 0}

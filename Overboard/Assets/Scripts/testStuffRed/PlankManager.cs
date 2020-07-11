@@ -55,7 +55,7 @@ public class PlankManager : MonoBehaviour
                 {
                     if (Severity > StartSearch && Severity < ProblemOptions[i])
                     {
-                        ProblemType = i;
+                        ProblemType = i+1; //Start Problem Number at 1 due to "NoItem" beeing of Index 0 and later Comparison Checks against this number
                         break;
                     }
                     StartSearch = ProblemOptions[i];

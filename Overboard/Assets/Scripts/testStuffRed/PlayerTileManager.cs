@@ -6,25 +6,28 @@ public class PlayerTileManager : MonoBehaviour
 {
     GameObject CurrentTile = null;
     PlankScript CurrentScript;
-    void OnTriggerEnter(Collider other)
+    public int HeldItemID = -2;
+    public string FixButton = "e";
+
+    void Update()
     {
-        if(CurrentTile != null)
+        if (Input.GetKeyDown(FixButton))
         {
-            if (CurrentTile.name != other.gameObject.name)
+            HeldItemID = GetComponent<PickUp>().GetObjID();
+            if(CurrentScript != null && CurrentScript.GetDamageType() == HeldItemID)
             {
-                Debug.Log("Stopping");
-                CurrentScript.StopCollision();
+                Debug.Log("Fixing Issue");
+                CurrentScript.Repair();
+                GetComponent<PickUp>().ResetHolder();
             }
         }
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
         CurrentTile = other.gameObject;
         CurrentScript = CurrentTile.GetComponent<PlankScript>();
-        CurrentScript.StartCollision();
         Debug.Log("Trigger");
     }
 
-    void OnTriggerExit()
-    {
-        Debug.Log("Exit");
-    }
 }
