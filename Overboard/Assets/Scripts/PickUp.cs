@@ -20,6 +20,15 @@ public class PickUp : MonoBehaviour
     /// <param name="other">The other Collider involved in this collision.</param>
     void OnTriggerStay(Collider other) => PickUpInput(other.gameObject);
 
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+            ResetHolder();
+    }
+
     //input for picking up items
     void PickUpInput(GameObject other)
     {
