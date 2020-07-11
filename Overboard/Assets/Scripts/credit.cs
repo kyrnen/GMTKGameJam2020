@@ -7,11 +7,19 @@ public class credit : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject credetmenu;
-
+    public GameObject options;
     public void voidOnclickcredetbutton()
     {
         MainMenu.SetActive(false);
         credetmenu.SetActive(true);
+
+    }
+
+    public void voidOnclickbackbutton()
+    {
+        MainMenu.SetActive(true);
+        credetmenu.SetActive(false);
+        options.SetActive(false);
 
 
     }
