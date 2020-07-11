@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed = 15;
     [SerializeField]
-    private float dashSpeed = 100;
+    private float dashSpeed = 25;
     //decrease dash time in game over time
     [SerializeField]
     private float startDashTime = 0.1f;
@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     //using rigidbody poses issues sometimes
     private Rigidbody rb;
     private KeyCode dash = KeyCode.Space;
-    
-
 
 
     /// <summary>
@@ -51,22 +49,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (direction == 0 && Input.GetKeyDown(dash))
         {
-            if (Input.GetAxis(horizontal) == -1)
+            if (Input.GetAxis(horizontal) < 0)
             {
                 direction = 1;
             }
-            else if (Input.GetAxis(horizontal) == 1)
+            else if (Input.GetAxis(horizontal) > 0)
             {
                 direction = 2;
             }
-            else if (Input.GetAxis(vertical) == -1)
+            else if (Input.GetAxis(vertical) > 0)
             {
                 direction = 3;
             }
-            else if (Input.GetAxis(vertical) == 1)
+            else if (Input.GetAxis(vertical) < 0)
             {
                 direction = 4;
             }
+            Debug.Log(Input.GetAxis(horizontal) + ", 0, " + Input.GetAxis(vertical));
             Debug.Log("Dash direction: " + direction.ToString());
         }
         else
@@ -74,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
             if (dashTime <= 0)
             {
                 direction = 0;
+                dashTime = startDashTime;
             }
             else
             {
@@ -89,11 +89,11 @@ public class PlayerMovement : MonoBehaviour
                 }
                 if (direction == 3)
                 {
-                    rb.velocity = Vector3.up * dashSpeed;
+                    rb.velocity = new Vector3(0, 0, 1) * dashSpeed;
                 }
                 if (direction == 4)
                 {
-                    rb.velocity = Vector3.down * dashSpeed;
+                    rb.velocity = new Vector3(0, 0, -1) * dashSpeed;
                 }
             }
         }
@@ -110,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+        Debug.Log(movement.ToString());
         rb.MovePosition(transform.position + (movement * speed * Time.fixedDeltaTime));
     }
 }
