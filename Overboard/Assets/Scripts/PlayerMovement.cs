@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed, dashSpeed, dashDelay;
     Vector3 moveDir, lastPos, newPos;
     bool hasDashed = true, canDash;
+    public string horizontalInput, verticalInput, dashInput;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -24,11 +25,11 @@ public class PlayerMovement : MonoBehaviour
         DashInput();
     }
 
-    void MoveInput() => moveDir = Vector3.ClampMagnitude(Vector3.forward * Input.GetAxis("Vertical") + Vector3.right * Input.GetAxis("Horizontal"), 1f);
+    void MoveInput() => moveDir = Vector3.ClampMagnitude(Vector3.forward * Input.GetAxis(verticalInput) + Vector3.right * Input.GetAxis(horizontalInput), 1f);
 
     void DashInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetButtonDown(dashInput) && canDash)
         {
             hasDashed = false;
             canDash = false;
