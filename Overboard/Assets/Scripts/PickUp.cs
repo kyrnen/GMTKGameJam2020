@@ -28,7 +28,7 @@ public class PickUp : MonoBehaviour
             {
                 selectedObj = pickUpID.id;
                 SelectObject();
-                Destroy(other.gameObject);
+                //Destroy(other.gameObject);
             }
         }
     }
@@ -48,7 +48,7 @@ public class PickUp : MonoBehaviour
         }
     }
 
-    int GetObjID()
+    public int GetObjID()
     {
         return selectedObj;
     }
