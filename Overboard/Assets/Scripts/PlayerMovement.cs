@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 getPlayerPosition()
     {
-        return transform.position;
+        return rb.transform.position;
     }
 
     IEnumerator DashDelay()

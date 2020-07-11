@@ -8,16 +8,21 @@ public class PlayerTileManager : MonoBehaviour
     PlankScript CurrentScript;
     public int HeldItemID = -2;
     public int PlayerNumber = 1;
-
+   
     private RaycastHit prev ;
-    private Ray r;
+    PlayerMovement p;
+    private void Start()
+    {
+         p = GetComponent<PlayerMovement>();
+    }
+
+    
     private void FixedUpdate()
     {
         RaycastHit hit;
-        r = new Ray(this.GetComponent<PlayerMovement>().getPlayerPosition(), Vector3.down);
-        if (Physics.Raycast( r, out hit))
+        if (Physics.Raycast(p.getPlayerPosition(), Vector3.down, out hit))
         {
-            if (prev.collider.gameObject != hit.collider.gameObject)
+            if (!prev.Equals(hit))
             {
                 prev = hit;
                 CurrentScript = hit.collider.gameObject.GetComponent<PlankScript>();
@@ -40,12 +45,5 @@ public class PlayerTileManager : MonoBehaviour
             }
         }
     }
-
-    //void OnTriggerEnter(Collider other)
-    //{
-    //    CurrentTile = other.gameObject;
-    //    CurrentScript = CurrentTile.GetComponent<PlankScript>();
-    //    Debug.Log("Trigger");
-    //}
 
 }
