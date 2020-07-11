@@ -41,6 +41,7 @@ public class PickUp : MonoBehaviour
             if (i == selectedObj)
             {
                 weapon.gameObject.SetActive(true);
+                Debug.Log(i);
                 break;
             }
             else
