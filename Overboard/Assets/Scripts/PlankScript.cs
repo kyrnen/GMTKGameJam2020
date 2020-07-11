@@ -5,7 +5,9 @@ public class PlankScript : MonoBehaviour
     public bool IsBroken;
     public int ErrorType;
     bool OnTop = false;
-    Color[] Colors = new Color[] {Color.red, Color.blue, Color.green };
+    public GameObject[] TileStates = new GameObject[5];
+    public int State = 0;
+
 
     public bool GetStatus()
     {
@@ -21,15 +23,20 @@ public class PlankScript : MonoBehaviour
     {
         IsBroken = true;
         ErrorType = Type;
-        this.GetComponent<Renderer>().material.color = Colors[Type];
+        TileStates[State].SetActive(false);
+        State = Random.Range(1, 5);
+        TileStates[State].SetActive(true);
     }
 
     public void Repair()
     {
         Debug.Log("Fixed");
         IsBroken = false;
+        TileStates[State].SetActive(false);
+        State = 0;
+        TileStates[State].SetActive(true);
         ErrorType = -1;
-        this.GetComponent<Renderer>().material.color = Color.white;
+
     }
 
 }
