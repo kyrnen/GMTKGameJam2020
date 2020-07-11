@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    new Rigidbody rigidbody;
+    private Rigidbody rb;
     public float speed, dashSpeed, dashDelay;
     public int PlayerNumber = 1;
     Vector3 moveDir, lastPos, newPos;
@@ -16,7 +16,11 @@ public class PlayerMovement : MonoBehaviour
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    void Start() => StartCoroutine(DashDelay());
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        StartCoroutine(DashDelay());
+    }
 
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
@@ -48,10 +52,10 @@ public class PlayerMovement : MonoBehaviour
     {
         newPos = transform.position - lastPos;
         Vector3 movement = new Vector3(Input.GetAxisRaw(horizontal), 0f, Input.GetAxisRaw(vertical)).normalized;
-        rigidbody.MovePosition(transform.position + (movement * speed * Time.fixedDeltaTime));
+        rb.MovePosition(transform.position + (movement * speed * Time.fixedDeltaTime));
         if (!hasDashed)
         {
-            rigidbody.MovePosition(transform.position + newPos * speed);
+            rb.MovePosition(transform.position + newPos * speed);
             hasDashed = true;
         }
         lastPos = transform.position;
