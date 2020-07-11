@@ -5,7 +5,7 @@ public class CannonBall : MonoBehaviour
     [SerializeField]
     new Rigidbody rigidbody;
     [SerializeField]
-    float speed = 1f, destroyDelay;
+    float speed = 1f, destroyDelay = 0;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
