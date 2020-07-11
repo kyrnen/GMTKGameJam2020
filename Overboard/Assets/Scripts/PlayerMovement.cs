@@ -55,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
             rb.MovePosition(transform.position + newPos * speed);
             hasDashed = true;
         }
+        if (newPos.magnitude > .1f)
+            transform.LookAt(transform.position + newPos);
         lastPos = transform.position;
     }
 
