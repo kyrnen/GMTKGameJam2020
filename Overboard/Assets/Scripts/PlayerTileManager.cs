@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerTileManager : MonoBehaviour
 {
-    GameObject CurrentTile = null;
     PlankScript CurrentScript;
     public int HeldItemID = -2;
     public int PlayerNumber = 1;
