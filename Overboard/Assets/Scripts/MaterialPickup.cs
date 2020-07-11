@@ -15,7 +15,7 @@ public class MaterialPickup : MonoBehaviour
     /// <param name="other">The Collision data associated with this collision.</param>
     void OnCollisionStay(Collision other)
     {
-        if(Input.GetKeyDown(Keys.GetKey(1+(PlayerNumber-1)*3)))
+        if(Input.GetKeyDown(Keys.GetKey(1+(PlayerNumber-1)*2)))
         {
             MaterialPickUpable materialPickUpable = other.gameObject.GetComponent<MaterialPickUpable>();
             if (materialPickUpable != null)

@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerTileManager : MonoBehaviour
 {
+    public GameObject[] ItemsHeld = new GameObject[3];
     PlankScript CurrentScript;
-    public int HeldItemID = -2;
+    public int HeldItemID = 0;
     public int PlayerNumber = 1;
-   
+
+    public bool HitCrate = false;
+    public TableScript ReturnTS;
+    public int HitCrateContent;
+
     private RaycastHit prev ;
     PlayerMovement p;
     private void Start()
@@ -28,21 +33,36 @@ public class PlayerTileManager : MonoBehaviour
                 Debug.Log("Trigger");
             }
         }
+
+        if (Input.GetKeyDown(Keys.GetKey(1 + (PlayerNumber - 1) * 2)))
+        {
+            if (HitCrate)
+            {
+                ChangeHeldItem(HitCrateContent);
+            }
+        }
     }
 
 
     void Update()
     {
 
-        if (Input.GetKeyDown(Keys.GetKey(2+(PlayerNumber-1)*3)))
+        if (Input.GetKeyDown(Keys.GetKey(1+(PlayerNumber-1)*2)))
         {
             if(CurrentScript != null && CurrentScript.GetDamageType() == HeldItemID)
             {
                 Debug.Log("Fixing Issue");
                 CurrentScript.Repair();
-                HeldItemID = -2;
+                ChangeHeldItem(0);
             }
         }
     }
 
+    public void ChangeHeldItem(int ID)
+    {
+        Debug.Log(ID);
+        ItemsHeld[HeldItemID].gameObject.SetActive(false);
+        ItemsHeld[ID].gameObject.SetActive(true);
+        HeldItemID = ID;
+    }
 }

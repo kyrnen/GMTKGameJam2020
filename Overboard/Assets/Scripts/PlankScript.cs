@@ -4,8 +4,7 @@ public class PlankScript : MonoBehaviour
 {
     public bool IsBroken;
     public int ErrorType;
-    bool OnTop = false;
-    public GameObject[] TileStates = new GameObject[5];
+    public GameObject[] TileStates = new GameObject[6];
     public int State = 0;
 
 
@@ -24,7 +23,8 @@ public class PlankScript : MonoBehaviour
         IsBroken = true;
         ErrorType = Type;
         TileStates[State].SetActive(false);
-        State = Random.Range(1, 5);
+        if(Type == 1) { State = 5; }
+        if(Type == 2) { State = Random.Range(1, 5); }
         TileStates[State].SetActive(true);
     }
 

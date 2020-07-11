@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void DashInput()
     {
-        if (Input.GetKeyDown(Keys.GetKey((PlayerNumber-1)*3)) && canDash)
+        if (Input.GetKeyDown(Keys.GetKey((PlayerNumber - 1) * 2)) && canDash)
         {
             hasDashed = false;
             canDash = false;
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             hasDashed = true;
         }
         if (newPos.magnitude > .1f)
-            transform.LookAt(transform.position + newPos);
+            transform.LookAt(new Vector3(transform.position.x, 90f, transform.position.z) + new Vector3(newPos.x, 0f, newPos.z));
         lastPos = transform.position;
     }
 
