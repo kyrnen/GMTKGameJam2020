@@ -4,7 +4,8 @@ public class PickUp : MonoBehaviour
 {
     [SerializeField]
     Transform objectHolder;
-    int selectedObj;
+    //the sibling index of the selected item
+    int selectedObj = 0;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -13,12 +14,13 @@ public class PickUp : MonoBehaviour
     void Start() => SelectObject();
 
     /// <summary>
-    /// OnCollisionStay is called once per frame for every collider/rigidbody
-    /// that is touching rigidbody/collider.
+    /// OnTriggerStay is called once per frame for every Collider other
+    /// that is touching the trigger.
     /// </summary>
-    /// <param name="other">The Collision data associated with this collision.</param>
-    void OnCollisionStay(Collision other) => PickUpInput(other.gameObject);
+    /// <param name="other">The other Collider involved in this collision.</param>
+    void OnTriggerStay(Collider other) => PickUpInput(other.gameObject);
 
+    //input for picking up items
     void PickUpInput(GameObject other)
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -28,33 +30,36 @@ public class PickUp : MonoBehaviour
             {
                 selectedObj = pickUpID.id;
                 SelectObject();
-                //Destroy(other.gameObject);
+                Destroy(other.gameObject);
             }
         }
     }
 
+    //checks the sibling index of each child of object holder.
+    //if the sibling index of the child is equal to selected object, if not, we set it active to false
     void SelectObject()
     {
         int i = 0;
-        foreach (Transform weapon in objectHolder)
+        foreach (Transform obj in objectHolder)
         {
             if (i == selectedObj)
             {
-                weapon.gameObject.SetActive(true);
-                Debug.Log(i);
-                break;
+                obj.gameObject.SetActive(true);
             }
             else
-                weapon.gameObject.SetActive(false);
+                obj.gameObject.SetActive(false);
             i++;
         }
     }
 
+    //resets the item holder
     public void ResetHolder()
     {
         selectedObj = 0;
         SelectObject();
     }
+
+    //returns the selected object
     public int GetObjID()
     {
         return selectedObj;

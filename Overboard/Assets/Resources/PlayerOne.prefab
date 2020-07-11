@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 6841188884439096358}
   - component: {fileID: 6841188884439096352}
   - component: {fileID: 5176017682351852771}
+  - component: {fileID: 3316565284064299099}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Player
@@ -219,11 +220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c910998260ef1249bf136070156d357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: Horizontal
-  vertical: Vertical
+  rigidbody: {fileID: 6841188884439096357}
   speed: 10
   dashSpeed: 30
-  startDashTime: 0.1
+  horizontal: Horizontal
+  vertical: Vertical
+  dash: 0
 --- !u!114 &6841188884439096352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +252,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+--- !u!65 &3316565284064299099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841188884439096359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7206975754968198697
 GameObject:
   m_ObjectHideFlags: 0
