@@ -60,6 +60,11 @@ public class PlayerMovement : MonoBehaviour
         lastPos = transform.position;
     }
 
+    public Vector3 getPlayerPosition()
+    {
+        return transform.position;
+    }
+
     IEnumerator DashDelay()
     {
         yield return new WaitForSeconds(dashDelay);
