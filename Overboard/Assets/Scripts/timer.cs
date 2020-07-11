@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
     public Text text;
-    private float timeleft = 100;
+    private float timeleft = 20;
     void Start()
     {
         text.text = timeleft.ToString("F2");
@@ -17,5 +18,14 @@ public class timer : MonoBehaviour
         timeleft -= Time.deltaTime;
 
         text.text = timeleft.ToString("F2");
+
+        if(timeleft <= 10)
+        {
+            text.color = Color.red;
+        }
+        if(timeleft <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
