@@ -6,7 +6,7 @@ public class ScrollText : MonoBehaviour
 {
     public float Speed;
     int StartDepth = -620;
-    int EndDepth = 2420;
+    int EndDepth = 2300;
 
     void Start()
     {
