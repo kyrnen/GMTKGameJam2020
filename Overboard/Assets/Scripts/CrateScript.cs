@@ -8,7 +8,7 @@ public class CrateScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerTileManager>().HitCrate = true;
             other.gameObject.GetComponent<PlayerTileManager>().HitCrateContent = ItemID;
