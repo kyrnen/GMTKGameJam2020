@@ -5,6 +5,7 @@ public class PlankManager : MonoBehaviour
     public float TickTime;
     public float IncedentChance;
     public int Cooldown = 0;
+
     int TimeSinceLast = 0;
     public int[] ProblemOptions = new int[] { };
     float TimeStorage;
