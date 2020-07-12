@@ -12,4 +12,10 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit!");
+        Application.Quit();
+    }
 }
