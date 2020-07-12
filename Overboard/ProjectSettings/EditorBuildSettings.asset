@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototye_V1.unity
     guid: 005388f7e5b1449459b36acf1130923a
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 9faea20284a79174ba6f2a4eb7bab86f
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 1c4e0ec9288c7344ebdba72805ca375c
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: d1d92aeab61288e4c8ab75704e400518
   m_configObjects: {}

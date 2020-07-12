@@ -6,6 +6,7 @@ public class timer : MonoBehaviour
 {
     public Text text;
     private float timeleft = 20;
+    public GameObject endcanvasscreen;
     void Start()
     {
         text.text = timeleft.ToString("F2");
@@ -23,7 +24,7 @@ public class timer : MonoBehaviour
         }
         if(timeleft <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            endcanvasscreen.SetActive(true);
         }
     }
 }
