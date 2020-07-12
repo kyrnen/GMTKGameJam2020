@@ -47,7 +47,8 @@ public class ScoreCounter : MonoBehaviour
         if (Running)
         {
             Points += Value;
-            PointDisplay.text = RunPoints.ToString();
+            Debug.Log("Adding Points: "+ Points);
+            RunPoints.text = "Point: "+Points.ToString();
         }
     }
 
@@ -56,7 +57,6 @@ public class ScoreCounter : MonoBehaviour
         if (Running)
         {
             FixNumber++;
-            FixDisplay.text = FixNumber.ToString();
         }
     }
 
@@ -64,6 +64,7 @@ public class ScoreCounter : MonoBehaviour
     {
         End.SetActive(true);
         Run.SetActive(false);
+        FixDisplay.text = FixNumber.ToString();
         PointDisplay.text = "Reached Points: " + Points.ToString();
         int toNext = 0;
         for (int i = 0; i < 3; i++)

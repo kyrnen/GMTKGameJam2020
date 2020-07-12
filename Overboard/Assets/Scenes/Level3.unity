@@ -127,6 +127,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1166864861}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &63434701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8646024652742018846, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 899598197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75101340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a91fdf72214d3124b9b8c8b45b2fcb46,
@@ -2457,18 +2469,6 @@ MonoBehaviour:
 --- !u!114 &899598204 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 618981316071029633, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 899598197}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &899598205 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6344240834033459522, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
     type: 3}
   m_PrefabInstance: {fileID: 899598197}
   m_PrefabAsset: {fileID: 0}
@@ -5241,7 +5241,7 @@ MonoBehaviour:
   PointDisplay: {fileID: 899598208}
   FixDisplay: {fileID: 899598207}
   TillNext: {fileID: 899598206}
-  RunPoints: {fileID: 899598205}
+  RunPoints: {fileID: 63434701}
   RunTime: {fileID: 899598204}
   Interact: {fileID: 899598210}
   Dash: {fileID: 899598209}
@@ -5695,10 +5695,10 @@ Transform:
   - {fileID: 1116629050}
   - {fileID: 1044443906}
   - {fileID: 359115695}
-  - {fileID: 1463505691}
   - {fileID: 337983295}
-  - {fileID: 1665773670}
+  - {fileID: 1463505691}
   - {fileID: 656091644}
+  - {fileID: 1665773670}
   - {fileID: 317821295}
   - {fileID: 993406146}
   - {fileID: 302499593}
