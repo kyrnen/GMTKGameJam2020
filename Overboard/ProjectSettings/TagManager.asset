@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Crates
+  - Keybind
   layers:
   - Default
   - TransparentFX
