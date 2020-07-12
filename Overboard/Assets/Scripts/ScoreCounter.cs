@@ -44,12 +44,20 @@ public class ScoreCounter : MonoBehaviour
 
     public void AddPoints(int Value)
     {
-        Points += Value;
+        if (Running)
+        {
+            Points += Value;
+            PointDisplay.text = RunPoints.ToString();
+        }
     }
 
     public void AddFix()
     {
-        FixNumber++;
+        if (Running)
+        {
+            FixNumber++;
+            FixDisplay.text = FixNumber.ToString();
+        }
     }
 
     public void EndOfTime()
