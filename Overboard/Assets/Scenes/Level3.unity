@@ -2410,6 +2410,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &899598209 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2499964902894872136, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 899598197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &899598210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4588555268640211338, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 899598197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &912843883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5115,6 +5139,8 @@ MonoBehaviour:
   TillNext: {fileID: 899598206}
   RunPoints: {fileID: 899598205}
   RunTime: {fileID: 899598204}
+  Interact: {fileID: 899598210}
+  Dash: {fileID: 899598209}
   PointsToStar: 320000005000000064000000
   ButtonScenes:
   - MainMenu

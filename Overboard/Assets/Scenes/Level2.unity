@@ -5167,6 +5167,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4406fbb89ccdf034b9af36ff6a7c91ad, type: 3}
+--- !u!114 &1822978371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2499964902894872136, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1822978370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1822978372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4588555268640211338, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1822978370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1850233590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7259230091295329046, guid: f7b663d23223f5c48b3a0e482b3241e3,
@@ -5511,6 +5535,8 @@ MonoBehaviour:
   TillNext: {fileID: 1593749694}
   RunPoints: {fileID: 540606472}
   RunTime: {fileID: 1538473730}
+  Interact: {fileID: 1822978372}
+  Dash: {fileID: 1822978371}
   PointsToStar: 320000005000000064000000
   ButtonScenes:
   - MainMenu
