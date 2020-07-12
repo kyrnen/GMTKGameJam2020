@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TableScript : MonoBehaviour
 {
-    int ItemID = 0;
+    public int ItemID = 0;
     int SwapItem = 0;
 
     void OnTriggerEnter(Collider other)
