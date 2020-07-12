@@ -13,6 +13,8 @@ public class ScoreCounter : MonoBehaviour
     public Text TillNext;
     public Text RunPoints;
     public Text RunTime;
+    public Text InteractText;
+    public Text DashText;
     public int[] PointsToStar = new int[3];
     public string[] ButtonScenes = new string[3];
     public GameObject End;
@@ -20,6 +22,11 @@ public class ScoreCounter : MonoBehaviour
     public float Timer = 120;
     bool Running = true;
 
+    void Start()
+    {
+        InteractText.text = "Interact: " + Keys.GetKey(1);
+        DashText.text = "Dash: " + Keys.GetKey(0);
+    }
 
     void Update()
     {
