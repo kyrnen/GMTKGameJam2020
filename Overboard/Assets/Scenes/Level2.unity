@@ -1031,7 +1031,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 4406fbb89ccdf034b9af36ff6a7c91ad, type: 3}
 --- !u!1 &453352518 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1723946729128436007, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+  m_CorrespondingSourceObject: {fileID: 3837360320095944572, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
     type: 3}
   m_PrefabInstance: {fileID: 453352517}
   m_PrefabAsset: {fileID: 0}
@@ -1111,6 +1111,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &453352526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3765920050235825147, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 453352517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &453352527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 618981316071029633, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 453352517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &453352528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8646024652742018846, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 453352517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &454270222
@@ -1311,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 1954315400, guid: df0182421b44d3445bd06e95fa333c3a, type: 3}
       propertyPath: End
       value: 
-      objectReference: {fileID: 453352518}
+      objectReference: {fileID: 453352526}
     - target: {fileID: 1954315400, guid: df0182421b44d3445bd06e95fa333c3a, type: 3}
       propertyPath: ButtonScenes.Array.data[1]
       value: Level2
@@ -1320,6 +1350,18 @@ PrefabInstance:
       propertyPath: ButtonScenes.Array.data[2]
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 1954315400, guid: df0182421b44d3445bd06e95fa333c3a, type: 3}
+      propertyPath: Run
+      value: 
+      objectReference: {fileID: 453352518}
+    - target: {fileID: 1954315400, guid: df0182421b44d3445bd06e95fa333c3a, type: 3}
+      propertyPath: RunPoints
+      value: 
+      objectReference: {fileID: 453352528}
+    - target: {fileID: 1954315400, guid: df0182421b44d3445bd06e95fa333c3a, type: 3}
+      propertyPath: RunTime
+      value: 
+      objectReference: {fileID: 453352527}
     - target: {fileID: 7429051609118402214, guid: df0182421b44d3445bd06e95fa333c3a,
         type: 3}
       propertyPath: m_Name
