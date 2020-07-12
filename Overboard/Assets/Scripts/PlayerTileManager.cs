@@ -38,6 +38,10 @@ public class PlayerTileManager : MonoBehaviour
         {
             if (HitCrate)
             {
+                if(ReturnTS != null)
+                {
+                    ReturnTS.ReturnPing(HeldItemID);
+                }
                 ChangeHeldItem(HitCrateContent);
             }
         }

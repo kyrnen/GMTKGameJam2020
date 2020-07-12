@@ -28,6 +28,6 @@ public class TableScript : MonoBehaviour
 
     public void ReturnPing(int SwapID)
     {
-        SwapItem = SwapID;
+        ItemID = SwapItem;
     }
 }
