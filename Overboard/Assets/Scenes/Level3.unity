@@ -2363,6 +2363,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1723946729870299674, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1954315394}
+    - target: {fileID: 1723946729870299674, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneStuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723946730557717382, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1954315394}
+    - target: {fileID: 1723946730557717382, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneStuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445232199383911040, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1954315394}
+    - target: {fileID: 5445232199383911040, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneStuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445232199383911040, guid: 4406fbb89ccdf034b9af36ff6a7c91ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4406fbb89ccdf034b9af36ff6a7c91ad, type: 3}
 --- !u!224 &899598198 stripped
